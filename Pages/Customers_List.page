@@ -1,0 +1,62 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ContactCell",
+					"Target": {
+						"Service": "/SampleApp/Services/SampleServiceV2.service",
+						"EntitySet": "Customers",
+						"QueryOptions": "$orderby=LastName"
+					},
+					"_Name": "SectionContactCell0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"ContactCell": {
+						"ContextMenu": {
+							"PerformFirstActionWithFullSwipe": true,
+							"Items": [
+							]
+						},
+						"DetailImage": "res://contact.png",
+						"Headline": "{FirstName}",
+						"Subheadline": "{LastName}",
+						"Description": "{City}",
+						"ActivityItems": [
+							{
+								"ActivityType": "Email",
+								"ActivityValue": "{EmailAddress}",
+								"_Name": "SectionContactCell0ActivityItem1"
+							},
+							{
+								"ActivityType": "Phone",
+								"ActivityValue": "{PhoneNumber}",
+								"_Name": "SectionContactCell0ActivityItem2"
+							},
+							{
+								"ActivityType": "VideoCall",
+								"ActivityValue": "{PhoneNumber}",
+								"_Name": "SectionContactCell0ActivityItem3"
+							}
+						]
+					},
+					"Search": {
+						"Enabled": true,
+						"BarcodeScanner": true
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Customers_List",
+	"Caption": "Customers"
+}

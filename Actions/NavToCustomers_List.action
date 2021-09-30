@@ -1,0 +1,5 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"PageToOpen": "/SampleApp/Pages/Customers_List.page",
+	"NavigationType": "Cross"
+}
